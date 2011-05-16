@@ -12,10 +12,14 @@ Quick start
 -----------
 
 * Make sure that you can install Subversion, LFTP and xpath in your command line, this script will use them all at some point. For Ubuntu users this will look like:
+
 	$ sudo apt-get install subversion lftp libxml-xpath-perl
+
 * Grab the `ftp2svn.sh` file and save it somewhere nice in your folders. The explanation below assumes that you've added it to your path.
 * Make the script executable.
-	$ chmod u+x ftp2svn.sh
+
+    $ chmod u+x ftp2svn.sh
+
 * Perform the first execution of the script, this will build the `~/.ftp2svn` config folder.
 	$ ftp2svn
 * Now drop in to that folder and edit the example config file.
