@@ -8,31 +8,25 @@ This is a bash script for backing up any collection of files over FTP and saving
 
 More about the motivation is here : http://blog.jamescooke.info/post/836576107/ftp2svn-something-for-version-tracking-when
 
-    $ this should be code /now
-
 Quick start
 -----------
 
-* Make sure that you can install Subversion, LFTP and xpath in your command line, this script will use them all at some point. For Ubuntu users this will look like:
-
-	sudo apt-get install subversion lftp libxml-xpath-perl
-
-* Grab the `ftp2svn.sh` file and save it somewhere nice in your folders. The explanation below assumes that you've added it to your path.
-* Make the script executable.
-
-    chmod u+x ftp2svn.sh
-
-* Perform the first execution of the script, this will build the `~/.ftp2svn` config folder.
+Make sure that you can install Subversion, LFTP and xpath in your command line, this script will use them all at some point. For Ubuntu users this will look like:
+	$ sudo apt-get install subversion lftp libxml-xpath-perl
+Grab the `ftp2svn.sh` file and save it somewhere nice in your folders. The explanation below assumes that you've added it to your path.
+Make the script executable.
+	$ chmod u+x ftp2svn.sh
+Perform the first execution of the script, this will build the `~/.ftp2svn` config folder.
 	$ ftp2svn
-* Now drop in to that folder and edit the example config file.
+Now drop in to that folder and edit the example config file.
 	$ cd ~/.ftp2svn
 	$ mv example.site.conf yoursite.site.conf
 	$ vi yoursite.site.conf
-* Add your settings and save.
-* Run the script with the '--build' flag. ftp2svn will test your settings, build initial repositories and create the lftp command files for each site if the FTP credentials give it access to the folder specified in the settings.
+Add your settings and save.
+Run the script with the '--build' flag. ftp2svn will test your settings, build initial repositories and create the lftp command files for each site if the FTP credentials give it access to the folder specified in the settings.
 	$ ftp2svn --build
-* Hopefully everything's worked out fine. You can now run the main command to complete your first download and checkout. You'll see lots of output as ftp2svn adds each file and commits the whole of your download to the repository.
-* You can now add ftp2svn to your crontab to run regularly.
+Hopefully everything's worked out fine. You can now run the main command to complete your first download and checkout. You'll see lots of output as ftp2svn adds each file and commits the whole of your download to the repository.
+You can now add ftp2svn to your crontab to run regularly.
 
 Notes
 -----
