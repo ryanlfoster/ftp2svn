@@ -161,7 +161,8 @@ EOF
 
 	done
 
-	echo "Finished build and check"
+	echo "Finished build and check."
+	echo "Now run 'ftp2svn.sh' to archive."
 	echo ""
 	
 	# [L] TODO check for good / bad state and report next step.. fix / run / cron
