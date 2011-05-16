@@ -60,7 +60,6 @@ EOF
 	exit 0;
 fi
 
-# [L] TODO secure this more... http://wiki.bash-hackers.org/howto/conffile
 # might not even need these config settings
 source "$CONFIG_FILE"
 
@@ -75,7 +74,6 @@ if [ "$1" = "--build" ]; then
 	do
 		echo "Loading '"$file"'"
 
-		# [L] TODO clean here too :D
 		source "$file"
 
 		# build params
@@ -86,8 +84,6 @@ if [ "$1" = "--build" ]; then
 
 
 		## ---------------------------------------------- BUILDING CODE
-
-		# [L] TODO - ensure the folders are not already used for a different site.
 
 		# build the main folder for this site...
 		if [ ! -d "$ARCHIVE" ]; then
@@ -101,8 +97,6 @@ if [ "$1" = "--build" ]; then
 		# if it is, then we can assume the repo exists - this allows you to create
 		# your own repo wherever you want.
 
-		# [L] TODO - improve this test for subversion repo checkout
-
 		if [ ! -d "$ARCHIVE_MIRROR/.svn" ]; then
 
 			if [ ! -d "$ARCHIVE_MIRROR" ]; then
@@ -115,7 +109,6 @@ if [ "$1" = "--build" ]; then
 					svnadmin create $REPO_FOLDER_NAME
 				else
 					echo "[INFO] Found repository folder : '"$ARCHIVE_REPO"'"
-					# TODO add a check that it's a "real repository" :D
 				fi
 
 				echo "[ACTION] Checking out repository into '"$ARCHIVE_MIRROR"'"
@@ -165,8 +158,6 @@ EOF
 	echo "Now run 'ftp2svn.sh' to archive."
 	echo ""
 	
-	# [L] TODO check for good / bad state and report next step.. fix / run / cron
-
 	exit 0
 
 else
@@ -176,7 +167,6 @@ else
 	do
 		echo "Loading '"$file"'"
 
-                # [L] TODO clean here too :D
                 source "$file"
 
                 # build params
