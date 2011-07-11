@@ -28,7 +28,7 @@ Perform the first execution of the script, this will build the `~/.ftp2svn` conf
 Now drop in to that folder and edit the example config file.
 
 	$ cd ~/.ftp2svn
-	$ mv example.site.conf yoursite.site.conf
+	$ mv site.conf.example yoursite.site.conf
 	$ vi yoursite.site.conf
 
 Add your settings and save.
