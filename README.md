@@ -6,7 +6,9 @@ About
 
 This is a bash script for backing up any collection of files over FTP and saving the mirror to a Subversion repository.
 
-More about the motivation is here : http://blog.jamescooke.info/post/836576107/ftp2svn-something-for-version-tracking-when
+A diagram of how the script can be used is here : http://blog.fublo.net/2011/06/ftp2svn/
+
+We also combine this with https://wordpress.org/extend/plugins/wp-db-backup/ to backup and track WordPress sites. 
 
 Quick start
 -----------
