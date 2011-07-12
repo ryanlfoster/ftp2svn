@@ -36,7 +36,7 @@ MIRROR_FOLDER_NAME="mirror"
 
 ## END config
 EOF
-	cat > "$CONFIG_DIR""/example.site.conf" << EOF
+	cat > "$CONFIG_DIR""/site.conf.example" << EOF
 ## ftp2svn site configuration example
 ## please edit as required
 ## create a copy of this file for each site to be archived
