@@ -39,27 +39,53 @@
 				<div class='eight columns alpha'>
 					<code>
 <pre class='prettyprint'>
-function codeExample() {
-	console.log('This is a code example.');
-}
+$ sudo apt-get install subversion lftp libxml-xpath-perl
 </pre>
 					</code>
 					
-					<h4>Example number 1</h4>
-					<p>Some example code here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacinia, enim quis interdum accumsan, odio velit ultricies lectus, sit amet pellentesque eros velit.</p>
+					<h4>Dependencies</h4>
+					<p>Make sure that you can install Subversion, LFTP and xpath in your command line, this script will use them all at some point. This example is for Ubuntu users.</p>
 				</div>
 				
 				<div class='eight columns omega'>
 					<code>
 <pre class='prettyprint'>
-function codeExample() {
-	console.log('This is a code example.');
-}
+$ chmod u+x ftp2svn.sh
 </pre>
 					</code>
 					
-					<h4>Example number 2</h4>
-					<p>Some example code here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacinia, enim quis interdum accumsan, odio velit ultricies lectus, sit amet pellentesque eros velit venenatis leo. Morbi lacinia tempor metus in viverra.</p>
+					<h4>Setup</h4>
+					<p>Grab the <em>ftp2svn.sh</em> file and save it somewhere nice in your folders. This code assumes that you've added it to your path.</p>
+					<p>You must allow the script to be executed. You can do that with this line.</p>
+				</div>
+			</div>
+			
+			<div class='sixteen columns'>
+				<div class='eight columns alpha'>
+					<code>
+<pre class='prettyprint'>
+$ ftp2svn
+$ cd ~/.ftp2svn
+$ mv site.conf.example yoursite.site.conf
+$ vi yoursite.site.conf
+</pre>
+					</code>
+					
+					<h4>Configuration</h4>
+					<p>Perform the first execution of the script, this will build the ~/.ftp2svn config folder.</p>
+					<p>Now drop in to that folder and edit the example config file.</p>
+				</div>
+				
+				<div class='eight columns omega'>
+					<code>
+<pre class='prettyprint'>
+$ ftp2svn --build
+</pre>
+					</code>
+					
+					<h4>Building</h4>
+					<p>Run the script with the '--build' flag. ftp2svn will test your settings, build initial repositories and create the lftp command files for each site if the FTP credentials give it access to the folder specified in the settings.</p>
+					<p>You can now add ftp2svn to your crontab to run regularly.</p>
 				</div>
 			</div>
 		</div>
